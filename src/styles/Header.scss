@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  img { height: 45px }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 0 5px;
+      color: #FF6060;
+      &.active { text-decoration: underline }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    padding: 40px 100px;
+    height: 68px;
+    ul {
+      a {
+        margin: 0 28px;
+        text-transform: unset;
+      }
+    }
+  }
+}

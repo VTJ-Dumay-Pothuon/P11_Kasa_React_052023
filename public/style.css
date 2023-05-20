@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+    font-size: 12px;
+}
+
+/* This equation makes the font 4px bigger per 100px of screen width, 
+from 12px for 400px, to 24px for 1000px, progressively. Then, it's capped. */
+@media (min-width: 400px) { body { font-size: calc(12px + 4 * ((100vw - 400px) / 200)) }}
+@media (min-width: 1000px) { body { font-size: 24px }}
