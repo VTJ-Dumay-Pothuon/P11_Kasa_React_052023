@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 footer {
-            // This is temporary, until page has more content
-            bottom: 0;
-            
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   height: 210px;
