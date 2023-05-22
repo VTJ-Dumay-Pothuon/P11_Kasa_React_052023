@@ -1,10 +1,8 @@
-// #FF6060 in rgba format is rgba(255, 96, 96, 1)
-
 .card {
     width: 300px;
     height: 300px;
     border-radius: 10px;
-    margin: 30px;
+    margin: 30px 5px;
     padding: 20px;
     position: relative;
     background: #FF6060;
@@ -30,4 +28,6 @@
         font-size: 18px;
         color: #FFFFFF;
     }
+    @media (min-width: 500px) { margin: 30px calc(10px + 10 * ((100vw - 700px) / 500)) }
+    @media (min-width: 1000px) { margin: 30px }
 }
