@@ -1,0 +1,46 @@
+.dropdown {
+    width: calc(100% - 40px);
+    max-width: 1020px;
+    background-color: #F6F6F6;
+    margin: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    button {
+        width: 100%;
+        position: relative;
+        height: 47px;
+        padding: 0 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color: #FFFFFF;
+        font-size: 13px;
+        text-align: left;
+        img {
+            position: absolute;
+            right: 10px;
+            top: 35%;
+            transition: transform 250ms ease-in-out;
+        }
+        .open {
+            transform: translateY(-25%) rotate(180deg);
+        }
+        @media screen and (min-width: 400px) {
+            font-size: calc(13px + 11 * ((100vw - 400px) / 600));
+        }
+        @media screen and (min-width: 1000px) { font-size: 24px }
+    }
+    &__content {
+        width: 100%;
+        height: fit-content;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        position: relative;
+        
+        @media screen and (min-width: 400px) {
+            font-size: calc(12px + 6 * ((100vw - 400px) / 600));
+        }
+        @media screen and (min-width: 1000px) { font-size: 18px }
+    }
+}

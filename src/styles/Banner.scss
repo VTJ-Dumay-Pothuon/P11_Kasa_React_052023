@@ -1,0 +1,50 @@
+.banner {
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    margin: 0 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        padding: 15px 30px;
+        width: 220px;
+        text-align: left;
+
+        @media (min-width: 400px) {
+            font-size: calc(24px + 4 * ((100vw - 400px) / 600));
+            width: calc(220px + 1000 * ((100vw - 400px) / 600));
+        }
+
+        @media (min-width: 1000px) {
+            font-size: 48px;
+            height: 220px;
+        }
+    }
+
+    @media (min-width: 400px) {
+          height: calc(110px + 11 * ((100vw - 400px) / 600));
+          margin: 20px calc(20px + 10 * ((100vw - 400px) / 600));
+    }
+
+    @media (min-width: 480px) {
+        h1 { text-align: center }
+    }
+            
+    @media (min-width: 1000px) {
+      justify-content: center;
+      height: 225px;
+      margin: 0 100px;
+      h1 { display: contents }
+    }
+    &--home {
+        background-image: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/images/eric-muhr-P_XxsdVgtpQ-unsplash.png");
+    }
+    &--about {
+        background-image: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.png");
+    }
+}

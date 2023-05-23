@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 footer {
-  position: absolute;
-  left: 0;
-  right: 0;
   height: 210px;
   background-color: #000000;
   color: #FFFFFF;
@@ -13,4 +10,12 @@ footer {
   justify-content: center;
   align-items: center;
   img { height: 32px }
+}
+
+// if screen size is over 1440px, margin is minus screen size minus 1440px
+@media (min-width: 1440px) {
+  footer {
+    width: unset;
+    margin: 0 calc(-100vw + 1440px);
+  }
 }

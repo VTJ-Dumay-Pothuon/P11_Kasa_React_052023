@@ -9,6 +9,14 @@ body {
     font-size: 12px;
 }
 
+/* Makes the display be at least one screen high, 
+   so that footer is always on bottom */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* This equation makes the font 4px bigger per 100px of screen width, 
 from 12px for 400px, to 24px for 1000px, progressively. Then, it's capped. */
 @media (min-width: 400px) { body { font-size: calc(12px + 4 * ((100vw - 400px) / 200)) }}
