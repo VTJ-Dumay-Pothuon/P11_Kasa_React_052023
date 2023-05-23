@@ -1,9 +1,11 @@
+// height is 225px and border radius is 10px on mobile, and border radius is 25px on desktop
+// between 400px and 1000px, border radius are calculated with a linear function
 .banner {
     height: 110px;
     background-size: cover;
     background-position: center;
     margin: 0 20px;
-    border-radius: 25px;
+    border-radius: 10px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -27,8 +29,9 @@
     }
 
     @media (min-width: 400px) {
-          height: calc(110px + 11 * ((100vw - 400px) / 600));
+          height: calc(110px + 115 * ((100vw - 400px) / 600));
           margin: 20px calc(20px + 10 * ((100vw - 400px) / 600));
+          border-radius: calc(10px + 15 * ((100vw - 400px) / 600));  
     }
 
     @media (min-width: 480px) {
@@ -39,6 +42,7 @@
       justify-content: center;
       height: 225px;
       margin: 0 100px;
+      border-radius: 25px;
       h1 { display: contents }
     }
     &--home {
@@ -46,5 +50,6 @@
     }
     &--about {
         background-image: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../assets/images/kalen-emsley-Bkci_8qcdvQ-unsplash.png");
+        height: 225px;
     }
 }

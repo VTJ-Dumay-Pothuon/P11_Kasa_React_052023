@@ -2,7 +2,7 @@
     width: 300px;
     height: 300px;
     border-radius: 10px;
-    margin: 30px 5px;
+    margin: 10px 5px;
     padding: 20px;
     position: relative;
     background: #FF6060;
@@ -29,6 +29,6 @@
         font-weight: 500;
         color: #FFFFFF;
     }
-    @media (min-width: 500px) { margin: 30px calc(10px + 10 * ((100vw - 700px) / 500)) }
-    @media (min-width: 1000px) { margin: 30px }
+    @media (min-width: 500px) { margin: calc(10px + 15 * ((100vw - 500px) / 500)) calc(10px + 10 * ((100vw - 700px) / 500)) }
+    @media (min-width: 1000px) { margin: 25px 30px }
 }
