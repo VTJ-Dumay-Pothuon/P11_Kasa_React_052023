@@ -15,18 +15,12 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link
-              to="/"
-              className={pathname === "/" ? "active" : ""}
-            >
+            <Link to="/" className={pathname === "/" ? "active" : ""}>
               Accueil
             </Link>
           </li>
           <li>
-            <Link
-              to="/about"
-              className={pathname === "/about" ? "active" : ""}
-            >
+            <Link to="/about" className={pathname === "/about" ? "active" : ""}>
               À propos
             </Link>
           </li>

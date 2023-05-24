@@ -4,6 +4,10 @@ import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
+    // if url is not /404, redirect to /404
+    if (window.location.pathname !== "/404") {
+        window.location.href = "/404";
+    }
     return (
         <React.Fragment>
         <Header />

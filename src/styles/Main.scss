@@ -3,10 +3,16 @@
 body {
     margin: 0 auto;
     max-width: 1440px;
-    background-color: white;
+    background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     color: #FF6060;
     font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+    font-weight: 500;
 }
 
 /* Makes the display be at least one screen high, 
