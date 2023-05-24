@@ -8,6 +8,7 @@ import data from '../assets/data/database_mock.json';
 import Dropdown from '../components/Dropdown';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
+import Host from '../components/Host';
 
 const Location = () => {
     const { id } = useParams();
@@ -44,7 +45,10 @@ const Location = () => {
                                         <Tag key={tag} tag={tag} />
                                     ))}
                                 </div>
+                                <div className="location__header__infos__right">
                                 <Rating rating={location.rating} />
+                                <Host host={location.host} />
+                                </div>
                             </div>
                         </section>
                         <section className="location__content">

@@ -14,36 +14,46 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin-bottom: 4px;
             &__tags {
                 display: inline-flex;
                 align-content: center;
                 flex-wrap: wrap;
                 gap: 10px;
             }
-            .rating {
+            &__right {
                 display: inline-flex;
                 height: 40px;
-                margin-right: 28px;
-                img {
-                    scale: 0.5;
-                    margin: auto -4px;
-                    @media screen and (min-width: 400px) {
-                        margin: auto calc(-4px + 4 * ((100vw - 400px) / 600));
+                width: calc(100% - 28px);
+                .rating {
+                    width: max-content;
+                    align-self: flex-start;
+                    img {
+                        scale: 0.5;
+                        margin: auto -4px;
+                        @media screen and (min-width: 400px) {
+                            margin: auto calc(-4px + 4 * ((100vw - 400px) / 600));
+                        }
+                        @media screen and (min-width: 700px) {
+                            scale: 0.75;
+                        }
+                        @media screen and (min-width: 1000px) {
+                            scale: 1;
+                            margin: auto 4px;
+                        }
                     }
-                    @media screen and (min-width: 700px) {
-                        scale: 0.75;
-                    }
-                    @media screen and (min-width: 1000px) {
-                        scale: 1;
-                        margin: auto 4px;
-                    }
+                }
+                @media screen and (min-width: 1000px) {
+                    flex-wrap: wrap-reverse;
+                    width: min-content;
                 }
             }
         }
     }
     &__content {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .dropdown {
             height: fit-content;
             margin: 10px 0;
@@ -51,7 +61,14 @@
                 width: 100%;
                 margin: 20px;
             }
+            @media screen and (min-width: 800px) {
+                width: calc(50% - 38px);
+                margin: 10px 0;
+            }
         }
+    }
+    @media screen and (min-width: 800px) {
+        padding-right: 50px;
     }
     @media screen and (min-width: 1150px) {
         padding: 0 100px;

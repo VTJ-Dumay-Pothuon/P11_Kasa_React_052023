@@ -1,0 +1,30 @@
+.host {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    &__name {
+        text-align: right;
+        width: min-content;
+    }
+    &__picture {
+        width: 32px; height: 32px;
+        border-radius: 50%;
+        background-color: #C4C4C4;
+        background-size: cover;
+        background-position: center;
+        @media (min-width: 400px) {
+            width: calc(32px + 32 * ((100vw - 400px) / 600));
+            height: calc(32px + 32 * ((100vw - 400px) / 600));
+        }
+        @media (min-width: 1000px) {
+            width: 64px; height: 64px;
+        }
+    }
+    @media screen and (min-width: 400px) {
+        align-items: center;
+    }
+    @media screen and (min-width: 800px) and (max-width: 1000px) {
+        margin-right: -28px;
+    }
+}
