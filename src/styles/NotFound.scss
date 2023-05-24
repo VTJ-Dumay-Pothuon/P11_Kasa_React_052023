@@ -5,9 +5,25 @@
 .not-found {
     text-align: center;
     h1 { 
-        font-size: 288px;
-        margin: 50px auto;
+        font-size: 96px;
+        font-weight: 700;
+        margin: 150px auto 10px;
+        @media (min-width: 400px) { 
+            font-size: calc(96px + 192 * ((100vw - 400px) / 600));
+            margin: calc(150px - 100 * ((100vw - 400px) / 600)) auto calc(10px - 40 * ((100vw - 400px) / 600));
+        }
+        @media (
+            min-width: 1000px) { font-size: 288px ;
+            margin: 50px auto -30px;
+        }
     }
-    h2 { font-size:  36px }
+    h2 { 
+        font-size:  18px;
+        padding: 0 55px;
+        margin-bottom: 120px;
+        line-height: 140%;
+        @media screen and (min-width: 400px) { font-size: calc(18px + 18 * ((100vw - 400px) / 600)) }
+        @media screen and (min-width: 1000px) { font-size: 36px }   
+    }
     a { color: #FF6060 }
 }

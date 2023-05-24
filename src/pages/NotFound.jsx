@@ -13,7 +13,7 @@ const NotFound = () => {
         <Header />
         <div className="not-found">
             <h1>404</h1>
-            <h2>Oups, la page que vous demandez n'existe pas.</h2>
+            <h2>Oups ! la page que vous demandez n'existe pas.</h2>
             <Link to="/">Retourner sur la page d'accueil</Link>
         </div>
         </React.Fragment>

@@ -17,6 +17,8 @@ header {
       margin: 0 5px;
       color: #FF6060;
       &.active { text-decoration: underline }
+      @media screen and (min-width: 400px) { font-size: calc(12px + 12 * ((100vw - 400px) / 600)) }
+      @media screen and (min-width: 1000px) { font-size: 24px }
     }
   }
 }
