@@ -24,7 +24,7 @@ const Location = () => {
             setLocation(filteredLocation[0]);
         } else {
             // if the location is not found, redirect to /404
-            window.location.href = "/404";
+            window.location.href = "/notfound";
         }
         // set isLoading to false
         setIsLoading(false);
