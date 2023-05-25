@@ -7,9 +7,11 @@ import Location from './pages/Location';
 import NotFound from './pages/NotFound';
 import './styles/Main.scss';
 
+const deploymentPath = '/p11_kasa_react_052023';
+
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router>
+    <Router basename={deploymentPath}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
