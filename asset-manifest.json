@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/P11_Kasa_React_052023/static/css/main.40a57aaf.css",
+    "main.js": "/P11_Kasa_React_052023/static/js/main.b27b2a4f.js",
+    "static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.png": "/P11_Kasa_React_052023/static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.640955dab8c7bff25514.png",
+    "static/media/eric-muhr-P_XxsdVgtpQ-unsplash.png": "/P11_Kasa_React_052023/static/media/eric-muhr-P_XxsdVgtpQ-unsplash.19221376a0aa2549c135.png",
+    "static/media/logo.svg": "/P11_Kasa_React_052023/static/media/logo.b155131fa8b9f91a4a2958af7541fd8b.svg",
+    "static/media/logo_footer.svg": "/P11_Kasa_React_052023/static/media/logo_footer.e2ceb73957df9b52cb9935c612e07e4e.svg",
+    "static/media/star_empty.svg": "/P11_Kasa_React_052023/static/media/star_empty.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/star_full.svg": "/P11_Kasa_React_052023/static/media/star_full.30b8963e66a47777ef47296f505567be.svg",
+    "index.html": "/P11_Kasa_React_052023/index.html",
+    "static/media/arrow.svg": "/P11_Kasa_React_052023/static/media/arrow.2315f85335b3b6805ba7666d56cbc6aa.svg",
+    "main.40a57aaf.css.map": "/P11_Kasa_React_052023/static/css/main.40a57aaf.css.map",
+    "main.b27b2a4f.js.map": "/P11_Kasa_React_052023/static/js/main.b27b2a4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40a57aaf.css",
+    "static/js/main.b27b2a4f.js"
+  ]
+}
