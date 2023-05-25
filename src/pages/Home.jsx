@@ -14,7 +14,7 @@ const Home = () => {
       <Banner content="Chez vous, partout et ailleurs" />
       <div className="cards">
         {data.map((location) => (
-          <Card title={location.title} cover={location.cover} id={location.id} />
+          <Card title={location.title} cover={location.cover} id={location.id} key={location.id} />
         ))}
       </div>
       <Footer />

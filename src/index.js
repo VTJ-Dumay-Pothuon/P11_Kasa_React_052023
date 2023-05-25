@@ -7,7 +7,8 @@ import Location from './pages/Location';
 import NotFound from './pages/NotFound';
 import './styles/Main.scss';
 
-const deploymentPath = '/p11_kasa_react_052023';
+// deploymentPath is null if url is localhost, otherwise it is the name of the repository
+const deploymentPath = process.env.PUBLIC_URL;
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

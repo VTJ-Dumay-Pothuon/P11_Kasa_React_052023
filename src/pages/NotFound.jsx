@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 const NotFound = () => {
     // if url is not /404, redirect to /404
     const currentPath = window.location.pathname;
-    const deploymentPath = '/p11_kasa_react_052023';
+    
+    // deploymentPath is null if url is localhost, otherwise it is the name of the repository
+    const deploymentPath = process.env.PUBLIC_URL;
 
     if (currentPath !== `${deploymentPath}/404`) {
         window.location.href = `${deploymentPath}/404`;
