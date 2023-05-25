@@ -48,4 +48,14 @@
         }
         @media screen and (min-width: 1000px) { font-size: 18px }
     }
+    // between 1000px and 1200px, width goes from 100% - 0px to 100% - 400px, and margin goes from 10px 20px to 10px 200px,
+    // progressively as the screen gets bigger, using calc() and 100vw to make it responsive
+    @media screen and (min-width: 1000px) {
+        width: calc(100% - (0px + 400 * ((100vw - 1000px) / 200)));
+        margin: 10px calc(20px + 180 * ((100vw - 1000px) / 200));
+    }
+    @media screen and (min-width: 1200px) {
+        width: calc(100% - 400px);
+        margin: 10px 200px;
+    }
 }
