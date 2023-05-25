@@ -6,7 +6,10 @@ const deploymentPath = process.env.PUBLIC_URL;
 
 const Banner = ({ content }) => {
     // get the last part of the url (after the last /) and convert it to lowercase
-    const page = window.location.pathname.split(`${deploymentPath}/`).pop().toLowerCase() || 'home';
+    const extractedPath = window.location.pathname.split(`${deploymentPath}/?`).pop().toLowerCase().substring(1);
+    const page = extractedPath !== '' ? extractedPath : 'home';
+
+    // same but the slash is conditional thanks to regex
     return (
         // the banner--page class determines the background image of the banner
         // if content is not empty, display it
