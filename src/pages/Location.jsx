@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/Location.scss';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
-
-import data from '../assets/data/database_mock.json';
-import Dropdown from '../components/Dropdown';
+import Carousel from '../components/Carousel';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
 import Host from '../components/Host';
+import Dropdown from '../components/Dropdown';
+import Footer from '../components/Footer';
+
+import data from '../assets/data/database_mock.json';
 
 const Location = () => {
     const { id } = useParams();
@@ -35,7 +36,9 @@ const Location = () => {
             {!isLoading && location && (
                 <React.Fragment>
                     <div className="location">
-                        <section className="location__carousel"></section>
+                        <section className="location__carousel">
+                            <Carousel images={location.pictures} />
+                        </section>
                         <section className="location__header">
                             <h1>{location.title}</h1>
                             <h2>{location.location}</h2>
