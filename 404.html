@@ -12,7 +12,9 @@
 </head>
 <body>
   <script>
-    window.location.replace("/p11_kasa_react_052023/notfound");
+    if (window.location.href.endsWith("/notfound") === false) {
+      window.location.replace("/p11_kasa_react_052023/notfound");
+    }
   </script>
 </body>
 </html>
