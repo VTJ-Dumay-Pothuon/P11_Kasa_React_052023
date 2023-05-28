@@ -16,6 +16,9 @@ footer {
 @media (min-width: 1440px) {
   footer {
     width: unset;
-    margin: 0 calc(-100vw + 1440px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

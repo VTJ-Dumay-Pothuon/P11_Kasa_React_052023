@@ -2,7 +2,7 @@
 
 body {
     margin: 0 auto;
-    max-width: 1440px;
+    position: relative;
     background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     color: #FF6060;
@@ -21,10 +21,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    @media screen and (min-width: 1440px) { padding-bottom: 210px }
 }
 
 /* This equation makes the font 4px bigger per 100px of screen width, 
 from 12px for 400px, to 24px for 1000px, progressively. Then, it's capped. */
 @media (min-width: 400px) { body { font-size: calc(12px + 6 * ((100vw - 400px) / 600)) }}
 @media (min-width: 1000px) { body { font-size: 18px }}
-@media (min-width: 1440px) { body { overflow-x: hidden }}
