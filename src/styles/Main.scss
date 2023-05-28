@@ -27,3 +27,4 @@ h1, h2, h3, h4, h5, h6 {
 from 12px for 400px, to 24px for 1000px, progressively. Then, it's capped. */
 @media (min-width: 400px) { body { font-size: calc(12px + 6 * ((100vw - 400px) / 600)) }}
 @media (min-width: 1000px) { body { font-size: 18px }}
+@media (min-width: 1440px) { body { overflow-x: hidden }}
