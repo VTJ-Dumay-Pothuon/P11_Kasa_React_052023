@@ -2,6 +2,7 @@
 
 body {
     margin: 0 auto;
+    max-width: 1440px;
     background-color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     color: #FF6060;
@@ -20,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    * { max-width: 1440px }
 }
 
 /* This equation makes the font 4px bigger per 100px of screen width, 
