@@ -1,166 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!--  THIS FILE ONLY EXIST BECAUSE "GH-PAGES" FAILS AT USING THE PROPER 404 ROUTER REDIRECTION   -->
-  <!-- IT HAS NOTHING TO DO WITH THE KASA PROJECT ITSELF, THUS IT DOESN'T RESPECT THE INSTRUCTIONS -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Apps for GitHub Pages</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. https://www.foo.tld/one/two?a=b&c=d#qwe, becomes
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      // Note: this 404.html file must be at least 512 bytes for it to work
+      // with Internet Explorer (it is currently > 512 bytes)
 
-  <!-- PLEASE IGNORE IT. -->
+      // If you're creating a Project Pages site and NOT using a custom domain,
+      // then set pathSegmentsToKeep to 1 (enterprise users may need to set it to > 1).
+      // This way the code will only replace the route part of the path, and not
+      // the real directory in which the app resides, for example:
+      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
+      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
+      // Otherwise, leave pathSegmentsToKeep as 0.
+      var pathSegmentsToKeep = 1;
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Not Found</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
 
-    body {
-        margin: 0 auto;
-        max-width: 1440px;
-        background-color: #FFFFFF;
-        font-family: 'Montserrat', sans-serif;
-        color: #FF6060;
-        font-size: 12px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        color: #FF6060;
-        font-weight: 500;
-    }
-
-    /* Makes the display be at least one screen high, 
-      so that footer is always on bottom */
-    #root {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    /* This equation makes the font 4px bigger per 100px of screen width, 
-    from 12px for 400px, to 24px for 1000px, progressively. Then, it's capped. */
-    @media (min-width: 400px) { body { font-size: calc(12px + 6 * ((100vw - 400px) / 600)) }}
-    @media (min-width: 1000px) { body { font-size: 18px }}
-    /* Inline CSS for NotFound component */
-    .not-found {
-      text-align: center;
-    }
-
-    .not-found h1 {
-      font-size: 96px;
-      font-weight: 700;
-      margin: 150px auto 10px;
-    }
-
-    @media (min-width: 400px) {
-      .not-found h1 {
-        font-size: calc(96px + 192 * ((100vw - 400px) / 600));
-        margin: calc(150px - 100 * ((100vw - 400px) / 600)) auto calc(10px - 40 * ((100vw - 400px) / 600));
-      }
-    }
-
-    @media (min-width: 1000px) {
-      .not-found h1 {
-        font-size: 288px;
-        margin: 50px auto -30px;
-      }
-    }
-
-    .not-found h2 {
-      font-size: 18px;
-      padding: 0 55px;
-      margin-bottom: 120px;
-      line-height: 140%;
-    }
-
-    @media screen and (min-width: 400px) {
-      .not-found h2 {
-        font-size: calc(18px + 18 * ((100vw - 400px) / 600));
-      }
-    }
-
-    @media screen and (min-width: 1000px) {
-      .not-found h2 {
-        font-size: 36px;
-      }
-    }
-
-    .not-found a {
-      color: #FF6060;
-    }
-
-    /* Inline CSS for Header component */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: white;
-    }
-
-    header img {
-      height: 45px;
-    }
-
-    header ul {
-      list-style: none;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header ul a {
-      text-decoration: none;
-      text-transform: uppercase;
-      margin: 0 5px;
-      color: #FF6060;
-    }
-
-    header ul a.active {
-      text-decoration: underline;
-    }
-
-    @media screen and (min-width: 400px) {
-      header ul a {
-        font-size: calc(12px + 12 * ((100vw - 400px) / 600));
-      }
-    }
-
-    @media screen and (min-width: 1000px) {
-      header {
-        padding: 40px 100px;
-        height: 68px;
-      }
-
-      header ul a {
-        margin: 0 28px;
-        text-transform: unset;
-        font-size: 24px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <script>
-    if (window.location.href.endsWith("/notfound") === false) {
-      window.location.replace("/p11_kasa_react_052023/notfound");
-    }
-  </script>
-  <div id="root">
-    <!-- Rendered content of NotFound component -->
-    <header>
-      <a href="./">
-        <img src="/p11_kasa_react_052023/static/media/logo.b155131fa8b9f91a4a2958af7541fd8b.svg" alt="Logo">
-      </a>
-      <ul>
-        <li><a href="./">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-      </ul>
-    </header>
-    <div class="not-found">
-      <h1>404</h1>
-      <h2>Oups ! La page que vous demandez n'existe pas.</h2>
-      <a href="./">Retourner sur la page d'accueil</a>
-      </div>
-        </div>
-      </body>
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
