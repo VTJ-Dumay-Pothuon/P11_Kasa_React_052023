@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/p11_kasa_react_052023/static/css/main.382f3abc.css",
+    "main.css": "/p11_kasa_react_052023/static/css/main.b72a84e6.css",
     "main.js": "/p11_kasa_react_052023/static/js/main.751e6fc5.js",
     "static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.png": "/p11_kasa_react_052023/static/media/kalen-emsley-Bkci_8qcdvQ-unsplash.640955dab8c7bff25514.png",
     "static/media/eric-muhr-P_XxsdVgtpQ-unsplash.png": "/p11_kasa_react_052023/static/media/eric-muhr-P_XxsdVgtpQ-unsplash.19221376a0aa2549c135.png",
@@ -11,11 +11,11 @@
     "static/media/star_full.svg": "/p11_kasa_react_052023/static/media/star_full.30b8963e66a47777ef47296f505567be.svg",
     "index.html": "/p11_kasa_react_052023/index.html",
     "static/media/arrow.svg": "/p11_kasa_react_052023/static/media/arrow.2315f85335b3b6805ba7666d56cbc6aa.svg",
-    "main.382f3abc.css.map": "/p11_kasa_react_052023/static/css/main.382f3abc.css.map",
+    "main.b72a84e6.css.map": "/p11_kasa_react_052023/static/css/main.b72a84e6.css.map",
     "main.751e6fc5.js.map": "/p11_kasa_react_052023/static/js/main.751e6fc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.382f3abc.css",
+    "static/css/main.b72a84e6.css",
     "static/js/main.751e6fc5.js"
   ]
 }
