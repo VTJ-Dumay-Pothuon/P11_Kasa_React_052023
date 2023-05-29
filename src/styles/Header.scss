@@ -11,7 +11,6 @@ header {
     align-items: flex-end;
     justify-content: space-between;
     padding: 0;
-    margin-right: -28px;
     a {
       text-decoration: none;
       text-transform: uppercase;
@@ -21,18 +20,14 @@ header {
       @media screen and (min-width: 400px) { font-size: calc(12px + 12 * ((100vw - 400px) / 600)) }
       @media screen and (min-width: 1000px) { font-size: 24px }
     }
+    @media screen and (min-width: 1000px) { margin-right: -28px }
   }
-}
-
-@media (min-width: 800px) {
-  header {
+  @media (min-width: 800px) {
     padding: 30px 100px;
     height: 68px;
-    ul {
-      a {
-        margin: 0 28px;
-        text-transform: unset;
-      }
+    ul a {
+      margin: 0 28px;
+      text-transform: unset;
     }
   }
 }
