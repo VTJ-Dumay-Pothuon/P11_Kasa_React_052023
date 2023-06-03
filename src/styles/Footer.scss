@@ -12,7 +12,6 @@ footer {
   img { height: 32px }
 }
 
-// if screen size is over 1440px, margin is minus screen size minus 1440px
 @media (min-width: 1440px) {
   footer {
     width: unset;
