@@ -42,6 +42,8 @@
                 @media screen and (min-width: 1000px) { scale: 3 }
             }
         }
+        // middlefield is the space between the buttons, that allows to pause the carousel
+        .middlefield { display: flex ; width: 100% ; height: 38px }
         @media screen and (min-width: 750px) { width: calc(100% - 10px) }
         @media screen and (min-width: 1000px) { width: calc(100% - 20px) }
     }

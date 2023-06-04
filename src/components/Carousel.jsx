@@ -50,6 +50,7 @@ const Carousel = ({ images }) => {
                 <button className="carousel__buttons__previous" onClick={previousImage} disabled={images.length === 1}>
                     <img src={arrow} alt="précédent" className="previous" />
                 </button>
+                <div className="middlefield" onClick={() => setIsTimerPaused(!isTimerPaused)} />
                 <button className="carousel__buttons__next" onClick={nextImage} disabled={images.length === 1}>
                     <img src={arrow} alt="suivant" className="next" />
                 </button>
