@@ -10,9 +10,9 @@
     min-height: 18px;
     height: fit-content;
     @media (min-width: 400px) {
-        font-size: calc(10px + (14 - 10) * ((100vw - 400px) / 600));
-        width: calc(84px + (115 - 84) * ((100vw - 400px) / 600));
-        min-height: calc(18px + (25 - 18) * ((100vw - 400px) / 600));
+        font-size: calc(10px + 4 * ((100vw - 400px) / 600));
+        width: calc(84px + 31 * ((100vw - 400px) / 600));
+        min-height: calc(18px + 7 * ((100vw - 400px) / 600));
         border-radius: calc(5px + 5 * ((100vw - 400px) / 600));
     }
     @media (min-width: 1000px) {
