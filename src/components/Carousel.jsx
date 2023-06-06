@@ -10,33 +10,27 @@ const Carousel = ({ images }) => {
     useEffect(() => {
         /// disable if images.length === 1
         if (images.length === 1) { return }
-        // if the timer is not paused, set a timer to go to the next image after 5 seconds
-        // clicking on the image pauses the timer
         if (!isTimerPaused) {
             const timer = setTimeout(() => {
                 setCurrentImageIndex((currentImageIndex + 1) % images.length);
-            }, 5000);
+            }, 5000); // 5 seconds loop
             // when the component unmounts, clear the timer
             return () => clearTimeout(timer);
         }
     }, [currentImageIndex, images.length, isTimerPaused]);
 
     const previousImage = () => {
-        // if the current image is the first image, go to the last image
         if (currentImageIndex === 0) {
             setCurrentImageIndex(images.length - 1);
         } else {
-            // else go to the previous image
             setCurrentImageIndex(currentImageIndex - 1);
         }
     };
 
     const nextImage = () => {
-        // if the current image is the last image, go to the first image
         if (currentImageIndex === images.length - 1) {
             setCurrentImageIndex(0);
         } else {
-            // else go to the next image
             setCurrentImageIndex(currentImageIndex + 1);
         }
     };
